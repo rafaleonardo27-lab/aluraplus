@@ -1,0 +1,190 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --vermelho-imagem: #EC2F46;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3C92FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* --- SEÇÃO PRINCIPAL (COMBO+) --- */
+
+.principal {
+    background-image: url(img/background.png); /*quando a imagem não é "importante" para a experiencia do usuário a melhor opção é carregar no css*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /* Divide a tela em duas colunas */
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block; /* Volta para block para ocuparem o mesmo espaço */
+    text-decoration: none;
+    margin-bottom: 1em;
+    /* Centralização e largura */
+    width: 400px;       /* Define uma largura igual para os dois */
+    margin-left: auto;  /* Auxilia na centralização */
+    margin-right: auto; /* Auxilia na centralização */
+}
+
+.container__botao a:hover{
+    color: var(--cinza-secundario);
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 1px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+/* --- SEÇÃO SECUNDÁRIA (ASSISTA DO SEU JEITO) --- */
+
+.container__secundario {
+    display: flex; /* Alinha imagem e texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 0 10em; /* Reduzi a margem de 2500px para 10em para caber na tela */
+    height: 100vh; /* Faz a seção ocupar a altura da tela */
+}
+
+.secundario__imagem {
+    width: 40%; /* Define que a imagem ocupa metade do container */
+}
+
+.container__descricao {
+    width: 50%; /* Define que o texto ocupa a outra metade */
+    padding: 2em;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+    text-align: center;
+    width: 150px;
+}
+
+.container__descricao{
+    padding: 4em;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item{
+    font-size: 30px;
+    color: var(--branco-principal);
+}
+
+.rodape{
+    text-align: center;
+}
+
+.rodape__logo{
+    width: 102px;
+    height: 35px;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 2em 0;
+}
+
+.lista__link{
+    font-size: 16px;
+    color: var(--branco-principal);
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul);
+}
+
+.lista__link a:active{
+    color: var(--vermelho-imagem);
+}
+
+.lista__link__item{
+    text-decoration: none;
+    padding: 1em;
+    color: var(--branco-principal);
+    font-weight: 400;
+}
+
+.rodape__texto{
+    font-size: 14px;
+    color: var(--cinza-secundario);
+    display: flex;
+    justify-content: center;
+    margin: 0 0 1em 0
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
